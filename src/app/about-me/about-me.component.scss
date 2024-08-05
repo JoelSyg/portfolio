@@ -1,0 +1,33 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh; // das muss weg
+}
+
+div {
+    display: flex;
+    gap: 52px;
+    flex-direction: column;
+
+    h2 {
+        font-size: 78px;
+        line-height: 78px;
+        letter-spacing: 1%;
+        font-family: 'Syne';
+        font-weight: 800;
+        margin: 0;
+    }
+
+    p {
+        max-width: 619px;
+    }
+
+}
+
+img {
+    height: 533px;
+    width: 533px;
+    object-fit: cover;
+    object-position: 65%;
+    margin-top: 140px;
+}
