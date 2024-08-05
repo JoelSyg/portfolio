@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+
+
+section {
+    height: calc(100vh - 92px);
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+        font-size: 128px;
+        margin: 0;
+        font-family: 'Syne';
+        font-weight: 800;
+        letter-spacing: -2.5%;
+        line-height: 128px;
+    }
+
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .seperator {
+            background-color: black;
+            height: 3px;
+            width: 628px;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: -2.5%;
+            color: $accent-color;
+        }
+    }
+
+    .mail-and-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 23px;
+        letter-spacing: -2.5%;
+        line-height: 23px;
+
+        .mail {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+    }
+
+}
+
