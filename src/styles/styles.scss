@@ -1,5 +1,7 @@
+@import './variables';
+
 body {
-    background-color: #FFFCF3;
+    background-color: $primary-color;
     margin: 0px 100px 0px 100px;
 }
 
