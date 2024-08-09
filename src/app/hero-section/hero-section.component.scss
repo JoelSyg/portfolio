@@ -2,9 +2,11 @@
 
 section {
     height: 100vh;
+    margin: $margin-left-right;
 }
 
 .headline {
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +50,7 @@ section {
         letter-spacing: -2.5%;
         line-height: 23px;
         width: 100%;
+        margin-top: 48px;
 
         .mail {
             writing-mode: vertical-lr;
