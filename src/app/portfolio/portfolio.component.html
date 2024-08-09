@@ -1,4 +1,10 @@
 <section>
     <h2>Portfolio</h2>
     <span>Explore a selection of my work here - Interact with<br>projects to see my skills in action.</span>
+    <div class="projects">
+        @for (singleproject of projects; track $index) {
+            <app-project [project]="singleproject"></app-project>
+            }
+    </div>
+    <img class="arrow" src="./assets/img/arrow.svg" alt="">
 </section>
