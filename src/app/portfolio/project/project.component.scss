@@ -1,0 +1,101 @@
+@import "../../../styles/variables";
+
+.project-div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .img-container {
+    position: relative;
+    
+    img {
+      filter: grayscale(1);
+      transition: filter 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 100%; 
+      height: 100%;
+      border: 4px solid black;
+      box-sizing: border-box;
+      transition: opacity 0.125s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+  }
+
+  &:hover .img-container::before {
+    opacity: 1;
+  }
+
+  &:hover .img-container img {
+    filter: grayscale(0);
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 680px;
+    transform: translateX(-150%); /* Weiter nach links verschoben */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  &:hover .project-info {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  h3 {
+    margin-top: 96px;
+    font-size: 46px;
+    font-family: "Syne";
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+
+  span {
+    font-size: 28px;
+    font-family: "Overpass";
+    color: $accent-color;
+  }
+
+  p {
+    font-size: 23px;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 32px;
+
+    button {
+      border: 4px solid black;
+      height: 68px;
+      width: 213px;
+      background-color: transparent;
+      font-size: 20px;
+      transition: width 0.1s, font-weight 0.1s;
+      cursor: pointer;
+      display: block;
+
+      &:hover {
+        width: 240px;
+        font-weight: bold;
+      }
+
+      &:active {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+}
