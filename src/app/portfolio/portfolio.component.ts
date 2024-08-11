@@ -35,6 +35,5 @@ export class PortfolioComponent {
       imageUrl: '/assets/img/polloloco_img.png'
     }
   ];
-
 }
 

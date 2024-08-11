@@ -2,8 +2,16 @@
     <h2>Portfolio</h2>
     <span>Explore a selection of my work here - Interact with<br>projects to see my skills in action.</span>
     <div class="projects">
-        @for (singleproject of projects; track $index) {
-            <app-project [project]="singleproject"></app-project>
-            }
+      @for (project of projects; track $index;) {
+        <app-project 
+          [project]="project" 
+          [additionalClass]="($index % 2) === 1 ? 'even-project' : ''">
+        </app-project>
+      }
     </div>
 </section>
+
+
+  
+  
+  

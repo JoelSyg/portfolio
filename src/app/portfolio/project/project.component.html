@@ -1,15 +1,14 @@
-
-<div class="project-div">
-    <div class="img-container">
-      <img [src]="project.imageUrl" alt="">
-    </div>
-    <div class="project-info">
-      <h3>{{project.title}}</h3>
-      <span>{{project.technologies}}</span>
-      <p>{{project.description}}</p>
-      <div class="buttons">
-        <button>Live test</button>
-        <button>Github</button>
-      </div>
+<div class="project-div {{ additionalClass }}">
+  <div class="img-container">
+    <img [src]="project.imageUrl" alt="">
+  </div>
+  <div class="project-info">
+    <h3>{{ project.title }}</h3>
+    <span>{{ project.technologies.join(' | ') }}</span>
+    <p>{{ project.description }}</p>
+    <div class="buttons">
+      <button>Live test</button>
+      <button>Github</button>
     </div>
   </div>
+</div>
