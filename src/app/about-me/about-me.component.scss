@@ -2,11 +2,15 @@
 
 section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: $margin-left-right;
 }
 
-div {
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+.info-div {
   display: flex;
   gap: 52px;
   flex-direction: column;
@@ -23,6 +27,8 @@ div {
 
   p {
     max-width: 619px;
+    font-size: 23px;
+    font-family: 'Overpass';
   }
 
   button {
@@ -76,13 +82,16 @@ div {
     opacity: 1; // Sichtbar beim Hover
   }
 }
+}
 
 
 
 .arrow-wrap {
   width: 100%;
-  .arrow {
-  height: 215px;
-  margin-right: 30%;
+  display: flex;
+  justify-content: end;
+
+  img {
+    margin-right: 17%;
   }
 }

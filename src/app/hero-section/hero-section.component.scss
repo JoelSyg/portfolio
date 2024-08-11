@@ -3,10 +3,10 @@
 section {
     height: 100vh;
     margin: $margin-left-right;
+    padding-top: 64px;
 }
 
 .headline {
-    padding-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +39,8 @@ section {
             line-height: 48px;
             letter-spacing: -2.5%;
             color: $accent-color;
+            font-family: 'Overpass';
+            font-weight: 700;
         }
     }
 
@@ -50,7 +52,7 @@ section {
         letter-spacing: -2.5%;
         line-height: 23px;
         width: 100%;
-        margin-top: 48px;
+        margin-top: 32px;
 
         .mail {
             writing-mode: vertical-lr;
