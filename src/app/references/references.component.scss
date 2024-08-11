@@ -1,5 +1,68 @@
+@import '../../styles/variables';
+
 section {
-    margin-bottom: 100px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 140px 0px 140px;
 }
 
+h2 {
+    font-size: 78px;
+    line-height: 78px;
+    letter-spacing: 1%;
+    font-family: "Syne";
+    font-weight: 800;
+    margin-bottom: 32px;
+  }
+
+  span {
+    font-size: 23px;
+    line-height: 27px;
+    font-family: 'Overpass';
+    max-width: 723px;
+    text-align: center;
+  }
+
+.arrow-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 20%;
+  }
+
+.references-div {
+    display: flex;
+    gap: 32px;
+    margin: 60px 0px 24px 0px;
+
+    .single-reference {
+        font-size: 23px;
+        font-family: 'Overpass';
+        text-align: center;
+        max-width: 800px;
+        padding: 32px 60px 46px 60px;
+        box-sizing: border-box;
+        height: 328px;
+        border: 4px solid black;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+    
+}
+
+.buttons-wrap {
+  display: flex;
+  align-items: center;
+
+  .arrow-icon {
+    height: 42px;
+  }
+
+  .dot {
+    height: 16px;
+  }
+
+}
