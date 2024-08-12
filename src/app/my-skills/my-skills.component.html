@@ -2,11 +2,17 @@
   <div class="skills-container">
     <h2>My skills</h2>
     @for (skill of skills; track $index) {
-      <div class="skill-div">
-        <img src="{{skill.image}}" alt="">
-        <span>{{skill.name}}</span>
-      </div>
+    <div class="skill-div">
+      <img src="{{ skill.image }}" alt="" />
+      <span>{{ skill.name }}</span>
+    </div>
     }
   </div>
-  <img class="arrow" src="./assets/img/arrown_bottomright.svg" alt="">
+  <app-arrow
+    direction="right"
+    imgSrc="/assets/img/arrow_right.svg"
+    marginRight="0"
+    marginLeft="6%"
+  >
+  </app-arrow>
 </section>

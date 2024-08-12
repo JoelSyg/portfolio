@@ -1,30 +1,51 @@
 <section id="aboutMe">
   <div class="wrapper">
-  <div class="info-div">
-    <h2>About me</h2>
-    <p>
-      Lorem ipsum, recusandae voluptates eius suscipit similique! Iure
-      reiciendis ut expedita nam quisquam a necessitatibus nisi deserunt quidem!
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed beatae
-      molestias blanditiis repudiandae corporis earum cupiditate nobis tempore
-      illo dolore, labore modi a repellendus error alias ea maiores dolorem.
-    </p>
-    <button>Let's talk</button>
-  </div>
+    <div class="info-div">
+      <h2>About me</h2>
+      <p>
+        Lorem ipsum, recusandae voluptates eius suscipit similique! Iure
+        reiciendis ut expedita nam quisquam a necessitatibus nisi deserunt quidem!
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed beatae
+        molestias blanditiis repudiandae corporis earum cupiditate nobis tempore
+        illo dolore, labore modi a repellendus error alias ea maiores dolorem.
+      </p>
+      <button>Let's talk</button>
+    </div>
 
-  <div>
-    <div class="portrait-div">
-      <img
-        class="portrait"
-        src="./assets/img/JS_img.jpg"
-        alt="Ein Portrait von Joel Sygulla"
-      />
+    <div>
+      <div class="portrait-div">
+        <img
+          class="portrait"
+          src="./assets/img/JS_img.jpg"
+          alt="Ein Portrait von Joel Sygulla"
+        />
+      </div>
     </div>
   </div>
-  </div>
-  <div class="arrow-wrap">
+  <!-- <div [class.visible]="isArrowVisible" class="arrow-wrap">
     <img class="arrow" src="./assets/img/arrow.svg" alt="Navigations-Pfeil" />
-    </div>
+  </div> -->
+  <app-arrow 
+  direction="left" 
+  imgSrc="/assets/img/arrow_left.svg" 
+  marginRight="0" 
+  marginLeft="70%">
+</app-arrow>
+
+<!-- <app-arrow 
+  direction="right" 
+  imgSrc="/assets/img/arrow_right.svg" 
+  marginRight="30%" 
+  marginLeft="0">
+</app-arrow> -->
+
+
+
+  <!-- <app-arrow direction="right" imgSrc="/assets/img/arrow_right.svg"></app-arrow> -->
+
 </section>
+
+
+
