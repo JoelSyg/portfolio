@@ -24,7 +24,7 @@
       height: 100%;
       border: 4px solid black;
       box-sizing: border-box;
-      transition: transform 0.3s ease, opacity 0.125s ease; /* Achtung: Übergang wird durch transform gesteuert */
+      transition: transform 0.3s ease, opacity 0.125s ease;
       opacity: 0;
       pointer-events: none;
       z-index: 3;
@@ -45,27 +45,34 @@
     gap: 12px;
     width: 600px;
     transition: transform 0.3s ease;
-    transform: translateX(-115%); /* Standard: Text kommt von links */
+    transform: translateX(-115%);
   }
 
   &:hover .project-info {
-    transform: translateX(0); /* Text bewegt sich ins Bild */
+    transform: translateX(0);
   }
 
   /* Anpassungen für Projekte mit der Klasse even-project */
   &.even-project {
-    flex-direction: row-reverse; /* Bild rechts, Text links */
+    flex-direction: row-reverse;
 
     .img-container::before {
-      transform: translateX(-36px); /* Sanfte Verschiebung der border nach links */
+      transform: translateX(-36px);
     }
 
     .project-info {
-      transform: translateX(118%); /* Text startet rechts */
+      transform: translateX(118%);
     }
 
     &:hover .project-info {
-      transform: translateX(0); /* Text bewegt sich ins Bild */
+      transform: translateX(0);
+    }
+
+    /* Positionierung der Projektnummer für even-projects */
+    .projectnumber {
+      right: auto;
+      left: 0;
+      top: -20px; /* Etwas höher positionieren */
     }
   }
 
@@ -113,4 +120,24 @@
       }
     }
   }
+
+  .projectnumber {
+    font-size: 42px;
+    font-family: 'Overpass';
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    top: -32px; /* Etwas höher positionieren */
+    right: 0;
+    z-index: 4;
+
+    /* Anpassung für das even-project */
+    &.even-project-number {
+      right: auto;
+      left: 0;
+      top: -32px; /* Etwas höher positionieren */
+    }
+  }
 }
+
+

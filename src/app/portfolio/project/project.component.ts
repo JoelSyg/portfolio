@@ -17,5 +17,17 @@ export class ProjectComponent {
   };
 
   @Input() additionalClass: string = '';
+
+  @Input() projectNumber: number = 0;
+
+  @Input() totalProjects: number = 0;
+
+  get formattedProjectNumber(): string {
+    const formattedNumber = this.projectNumber < 10 ? `0${this.projectNumber}` : `${this.projectNumber}`;
+    const formattedTotal = this.totalProjects < 10 ? `0${this.totalProjects}` : `${this.totalProjects}`;
+    return `${formattedNumber}/${formattedTotal}`;
+  }
 }
+
+
 
