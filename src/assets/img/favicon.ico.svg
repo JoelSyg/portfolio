@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="18.607624mm"
+   height="9.1323643mm"
+   viewBox="0 0 18.607624 9.1323643"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-54.572477,-102.56357)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:9.87777px;font-family:'Gill Sans Ultra Bold Condensed';-inkscape-font-specification:'Gill Sans Ultra Bold Condensed,  Condensed';fill:#000000;stroke-width:0.264583"
+       x="53.171352"
+       y="109.63427"
+       id="text2"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Heavy';stroke-width:0.264583"
+         x="53.171352"
+         y="109.63427"
+         dx="0.75 0 0 0"
+         dy="0 0 0 -1.8200001">[<tspan
+   style="letter-spacing:0px;word-spacing:0px"
+   id="tspan7"
+   dy="0.2"
+   dx="0">J</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Heavy';letter-spacing:0px"
+   id="tspan3"
+   dy="1.62"
+   dx="-1.5">S</tspan>]</tspan></text>
+    <path
+       style="fill:#fbf5e4;fill-opacity:1;stroke-width:0.210344"
+       d="m 63.414319,102.62887 0.859607,0.33433 -1.05164,8.73273 -0.935928,-0.51574 z"
+       id="path8" />
+  </g>
+</svg>
