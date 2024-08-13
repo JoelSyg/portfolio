@@ -5,6 +5,32 @@ html {
 }
 
 
+/* Standardmäßige Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Dünne Scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E1E1E1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d; /* Standardmäßig helleres Grau */
+  transition: background-color 0.3s ease; /* Übergangseffekt für Hover und Drücken */
+}
+
+/* Hover-Effekt */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #373737; /* Dunkleres Grau beim Hover */
+}
+
+/* Aktiver Zustand (beim Drücken) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #0f0f0fe4; /* Komplett schwarz beim Drücken */
+}
+
+
+
 body {
     background-color: $primary-color;
     margin: 0;

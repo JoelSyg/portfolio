@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeroSectionComponent } from "./hero-section/hero-section.component";
-import { AboutMeComponent } from "./about-me/about-me.component";
-import { MySkillsComponent } from "./my-skills/my-skills.component";
-import { PortfolioComponent } from "./portfolio/portfolio.component";
-import { SayHiComponent } from './say-hi/say-hi.component';
-import { ReferencesComponent } from './references/references.component';
+import { HeroSectionComponent } from "./main-page/hero-section/hero-section.component";
+import { AboutMeComponent } from "./main-page/about-me/about-me.component";
+import { MySkillsComponent } from "./main-page/my-skills/my-skills.component";
+import { PortfolioComponent } from "./main-page/portfolio/portfolio.component";
+import { SayHiComponent } from './main-page/say-hi/say-hi.component';
+import { ReferencesComponent } from './main-page/references/references.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 

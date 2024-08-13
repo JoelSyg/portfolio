@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArrowComponent } from '../arrow/arrow.component';
+import { ArrowComponent } from '../../arrow/arrow.component';
 
 @Component({
   selector: 'app-references',
