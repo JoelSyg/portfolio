@@ -1,5 +1,9 @@
 @import '../../styles/variables';
 
+section {
+    scroll-margin-top: -52px;
+}
+
 .say-hi-wrap {
     height: 900px;
     width: 100%;
@@ -22,6 +26,11 @@
         letter-spacing: 1%;
         font-weight: 800;
         color: $primary-color;
+        transition: color 125ms ease-in-out;
+        
+        &:hover {
+            color: $accent-color;
+        }
     }
 
     .contact-wrap {
@@ -95,7 +104,7 @@
     bottom: -85px;
     height: 160px;
     background-color: rgb(0, 0, 0);
-    transform: skewY(4deg);
+    transform: skewY(5deg);
 }
 
 

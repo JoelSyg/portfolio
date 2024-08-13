@@ -5,6 +5,7 @@ section {
   justify-content: center;
   flex-direction: column;
   margin: 120px 100px 0px 100px;
+  scroll-margin-top: 164px;
 }
 
 .skills-container {
@@ -30,6 +31,12 @@ section {
     padding: 0 10px;
     background: $primary-color;
     font-family: "Syne";
+
+    transition: color 125ms ease-in-out;
+        
+    &:hover {
+        color: $accent-color;
+    }
   }
 
   .skill-div {

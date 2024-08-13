@@ -4,6 +4,7 @@ section {
   display: flex;
   flex-direction: column;
   margin: $margin-left-right;
+  scroll-margin-top: 92px;
 }
 
 .wrapper {
@@ -23,6 +24,12 @@ section {
     font-family: "Syne";
     font-weight: 800;
     margin: 0;
+
+    transition: color 125ms ease-in-out;
+        
+    &:hover {
+        color: $accent-color;
+    }
   }
 
   p {

@@ -14,6 +14,11 @@ h2 {
   font-family: "Syne";
   font-weight: 800;
   margin-bottom: 32px;
+  transition: color 125ms ease-in-out;
+        
+  &:hover {
+      color: $accent-color;
+  }
 }
 
 span {
@@ -50,7 +55,20 @@ span {
 
   .arrow-icon {
     height: 42px;
+    transition: transform 0.125s ease, color 0.125s ease, opacity 0.125s ease;
+    color: #333; /* Standardfarbe */
+    opacity: 0.8; /* Leicht transparent im Normalzustand */
+    cursor: pointer;
   }
+  
+  .arrow-icon:hover {
+    transform: scale(1.05); /* Vergrößerung des Icons */
+    color: #007BFF; /* Farbe beim Hover (z.B. Blau) */
+    opacity: 1; /* Volle Deckkraft beim Hover */
+  }
+  
+  
+  
 
   .dot {
     height: 16px;
