@@ -6,14 +6,24 @@
             <div class="contact-wrap">
                 <h3 class="question">Want to discuss a new project?</h3>
                 <span>Say hello! Let's discuss your ideas and make it happen</span>
-                <form class="form-" action="">
-                    <input type="text" placeholder="Your name">
-                    <input type="email" placeholder="Your email">
-                    <textarea name="" id="" placeholder="Your message"></textarea>
-                    <div class="privacy-policy">
 
-                    </div>
-                    <button>Send message</button>
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-">
+                    <label for="name"></label>
+                    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email"></label>
+                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+                    <label for="message"></label>
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" required></textarea>
+                    @if (!message.valid && message.touched) {
+                        <span>Please enter a message</span>
+                    }
+
+                    <!-- <div class="privacy-policy">
+
+                    </div> -->
+                    <input type="submit" value="submit">
                 </form>
             </div>
         </div>

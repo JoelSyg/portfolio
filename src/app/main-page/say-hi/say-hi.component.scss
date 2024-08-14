@@ -60,16 +60,25 @@ section {
             gap: 16px;
             width: 618px;
 
-            input {
+            #name {
                 height: 50px;
                 width: 100%;
                 background-color: transparent;
+                color: $primary-color;
+            }
+
+            #email {
+                height: 50px;
+                width: 100%;
+                background-color: transparent;
+                color: $primary-color;
             }
 
             textarea {
                 height: 200px;
                 width: 100%;
                 background-color: transparent;
+                color: $primary-color;
             }
 
             button {
