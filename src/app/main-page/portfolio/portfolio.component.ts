@@ -24,7 +24,7 @@ export class PortfolioComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
       livetestLink: '#',
       githubLink: '#',
-      imageUrl: '/assets/img/join_img.png'
+      imageUrl: './assets/img/join_img.png'
     },
     {
       title: 'Pollo Loco',
@@ -32,7 +32,7 @@ export class PortfolioComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       livetestLink: '#',
       githubLink: '#',
-      imageUrl: '/assets/img/polloloco_img.png'
+      imageUrl: './assets/img/polloloco_img.png'
     }
   ];
 }

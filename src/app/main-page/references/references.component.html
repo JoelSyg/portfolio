@@ -14,26 +14,26 @@
   <div class="buttons-wrap">
     <img
       class="arrow-icon"
-      src="/assets/img/left_icon.png"
+      src="./assets/img/left_icon.png"
       (click)="lastReference()"
       alt=""
     />
     @for (reference of references; track $index) { @if ($index ==
     currentReference) {
-    <img class="dot" src="/assets/img/dot_icon_blue.png" alt="" />
+    <img class="dot" src="./assets/img/dot_icon_blue.png" alt="" />
     } @else {
-    <img class="dot" src="/assets/img/dot_icon_black.png" alt="" />
+    <img class="dot" src="./assets/img/dot_icon_black.png" alt="" />
     } }
     <img
       class="arrow-icon"
-      src="/assets/img/right_icon.png"
+      src="./assets/img/right_icon.png"
       (click)="nextReference()"
       alt=""
     />
   </div>
   <app-arrow
     direction="left"
-    imgSrc="/assets/img/arrow_left.svg"
+    imgSrc="./assets/img/arrow_left.svg"
     marginRight="0"
     marginLeft="100%"
   >
