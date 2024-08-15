@@ -19,10 +19,8 @@ export class SayHiComponent {
     message: ""
   }
 
-  mailTest = true;
-
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://joel-sygulla.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -33,7 +31,7 @@ export class SayHiComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -45,9 +43,6 @@ export class SayHiComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
     }
   }
 
