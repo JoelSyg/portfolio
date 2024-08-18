@@ -43,6 +43,7 @@ header {
         flex-direction: column;
     
         a {
+            cursor: pointer;
             position: relative;
             text-decoration: none;
             font-size: 80px;
@@ -157,6 +158,7 @@ header {
             text-decoration: none;
             color: $primary-color;
             transition: color 125ms ease-in-out;
+            cursor: pointer;
         
             &:hover {
                 color: $accent-color;
@@ -182,7 +184,7 @@ header {
         }
 
         &:hover img {
-            transform: translateY(-12px);
+            transform: translateY(-8px);
         }
     }
 }

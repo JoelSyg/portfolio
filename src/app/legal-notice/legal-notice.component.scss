@@ -2,6 +2,7 @@
 
 section {
     margin: $margin-left-right;
+    padding-top: 24px;
     color: black;
     font-family: 'Overpass';
 
@@ -14,10 +15,16 @@ section {
         font-size: 46px;
     }
 
+    .back-icon {
+        height: 48px;
+        cursor: pointer;
+    }
 }
+
 
 .bottom-div {
     background-color: black;
     height: 48px;
     width: 100%;
 }
+

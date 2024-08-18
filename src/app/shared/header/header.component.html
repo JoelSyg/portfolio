@@ -5,16 +5,16 @@
 
 <div class="menu" [class.open]="menuOpen">
      <nav>
-        <a href=".#aboutMe" (click)="toggleMenu()">About me</a>
-        <a href=".#mySkills" (click)="toggleMenu()">My skills</a>
-        <a href=".#portfolio" (click)="toggleMenu()">Portfolio</a>
+        <a (click)="scrollToSection('aboutMe'); toggleMenu()">About me</a>
+        <a (click)="scrollToSection('mySkills'); toggleMenu()">My skills</a>
+        <a (click)="scrollToSection('portfolio'); toggleMenu()">Portfolio</a>
      </nav>
 
      <div class="say-hi-wrap">
         <div class="say-hi-top"></div>
         <div class="say-hi-bottom">
             <div class="say-hi-text">
-            <a href=".#sayHi" (click)="toggleMenu()">Say hi!</a>
+            <a (click)="scrollToSection('sayHi'); toggleMenu()">Say hi!</a>
             <span>sygullajoel&#64;gmail.com</span>
             </div>
             <div class="icons">
