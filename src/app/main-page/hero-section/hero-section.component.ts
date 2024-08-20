@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
+  constructor(private scrollService: ScrollService) {}
 
+  onButtonClick() {
+    this.scrollService.scrollToSection('sayHi');
+  }
 }

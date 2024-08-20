@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(private scrollService: ScrollService) {}
+
+  section!: string;
+
+  scrollToSection(section: string) {
+    this.scrollService.scrollToSection(section);
+  }
 
   menuOpen = false;
   imgSource = "./assets/img/menu_icon.svg";
@@ -58,11 +67,12 @@ export class HeaderComponent {
     }, 40);
   }
 
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  // scrollToSection(sectionId: string): void {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }
+
 }
 
