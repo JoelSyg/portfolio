@@ -1,21 +1,36 @@
 <header>
-    <img class="logo-img" src="./assets/img/JS_black.svg" alt="Logo">
-    <img class="menu-img" (click)="toggleMenu()" src="{{imgSource}}" alt="Menu">
-</header>
+    <a (click)="scrollToSection('top')"><img class="logo-img" src="./assets/img/js_logo.svg" alt="Logo"></a>
+    <div class="wrapper-right">
+      <div>
+        <span 
+          (click)="toggleMarkedLanguage('de')" 
+          class="{{ language === 'de' ? 'selected' : '' }}" class="language"
+        >DE</span>
+        <span>|</span>
+        <span 
+          (click)="toggleMarkedLanguage('en')" 
+          class="{{ language === 'en' ? 'selected' : '' }}" class="language"
+        >EN</span>
+      </div>
+      <img class="menu-img" (click)="toggleMenu()" src="{{imgSource}}" alt="Menu">
+    </div>
+  </header>
+  
+  
 
 <div class="menu" [class.open]="menuOpen">
-     <nav>
-        <a (click)="scrollToSection('aboutMe'); toggleMenu()">About me</a>
-        <a (click)="scrollToSection('mySkills'); toggleMenu()">My skills</a>
+    <nav>
+        <a (click)="scrollToSection('aboutMe'); toggleMenu()">{{'aboutMe' | translate}}</a>
+        <a (click)="scrollToSection('mySkills'); toggleMenu()">{{'mySkills' | translate}}</a>
         <a (click)="scrollToSection('portfolio'); toggleMenu()">Portfolio</a>
-     </nav>
+    </nav>
 
-     <div class="say-hi-wrap">
+    <div class="say-hi-wrap">
         <div class="say-hi-top"></div>
         <div class="say-hi-bottom">
             <div class="say-hi-text">
-            <a (click)="scrollToSection('sayHi'); toggleMenu()">Say hi!</a>
-            <span>sygullajoel&#64;gmail.com</span>
+                <a (click)="scrollToSection('sayHi'); toggleMenu()">{{ 'sayHi' | translate }}</a>
+                <span class="mail-adress">sygullajoel&#64;gmail.com</span>
             </div>
             <div class="icons">
                 <div>
@@ -34,7 +49,9 @@
                     </a>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
+
+
+
