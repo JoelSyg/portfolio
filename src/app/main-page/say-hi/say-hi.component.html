@@ -2,30 +2,87 @@
     <div class="say-hi-wrap">
         <div class="say-hi-top"></div>
         <div class="say-hi-bottom">
-            <h2>Say Hi!</h2>
+            <h2>{{ 'sayHi' | translate }}</h2>
             <div class="contact-wrap">
-                <h3 class="question">Want to discuss a new project?</h3>
-                <span>Say hello! Let's discuss your ideas and make it happen</span>
+                <h3 class="question">{{ 'wantToDiscuss' | translate }}</h3>
+                <span>{{ 'sayHello' | translate }}</span>
 
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-">
-                    <label for="name"></label>
-                    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+  
+                    <!-- Name-Feld -->
 
-                    <label for="email"></label>
-                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-
-                    <label for="message"></label>
-                    <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" required></textarea>
-                    @if (!message.valid && message.touched) {
-                        <span>Please enter a message</span>
+                    <div class="input-wrapper">
+                     
+                    @if (name.value) {
+                        <label for="name">{{ 'yourName' | translate }}</label>
+                    }
+                    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'yourName' | translate }}" 
+                      required [class.filled]="contactData.name !== ''" #name="ngModel">
+                    
+                    <!-- Fehlermeldung für Name -->
+                    @if (name.invalid && (name.touched || contactForm.submitted)) {
+                      <div class="required-message"><small class="error-message">{{ 'yourNameRequired' | translate }}</small></div>
                     }
 
-                    <!-- <div class="privacy-policy">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                  
+                    <!-- E-Mail-Feld -->
+                    @if (email.value) {
+                        <label for="email">{{ 'yourEmail' | translate }}</label>
+                    }
 
-                    </div> -->
-                    <input class="submit-button" type="submit" value="Send message">
-                </form>
+                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ 'yourEmail' | translate }}" 
+                      required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [class.filled]="contactData.email !== ''" #email="ngModel">
+                    
+                    <!-- Fehlermeldung für E-Mail -->
+                    @if (email.invalid && (email.touched || contactForm.submitted)) {
+                        <div class="required-message"><small class="error-message">{{ 'yourEmailRequired' | translate }}</small></div>
+                    }
+
+                    </div>
+
+                    <div class="input-wrapper">
+                  
+                    <!-- Nachrichtenfeld -->
+                    @if (message.value) {
+                        <label for="message">{{ 'yourMessage' | translate }}</label>
+                    }
+
+                    <textarea [(ngModel)]="contactData.message" name="message" id="message" 
+                      placeholder="{{ 'yourMessage' | translate }}" required [class.filled]="contactData.message !== ''" #message="ngModel"></textarea>
+                    
+                    <!-- Fehlermeldung für Nachricht -->
+                    @if (message.invalid && (message.touched || contactForm.submitted)) {
+                        <div class="required-message"><small class="error-message">{{ 'yourMessageRequired' | translate }}</small></div>
+                    }
+
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                  
+                    <!-- Datenschutzcheckbox -->
+                    <div class="privacy-policy">
+                      <img [src]="getCheckboxImg()" (click)="toggleCheckbox()" alt="Checkbox">
+                      <span>{{ 'privacyPolicyText' | translate }} &nbsp;<a class="privacy-policy-link" [routerLink]="['/legal-notice']">{{ 'privacyPolicyLink' | translate }}</a>&nbsp; {{ 'agreePolicy' | translate }}</span>
+                    </div>
+
+                    @if (!isChecked && contactForm.submitted) {
+                        <div class="required-message">
+                          <small class="error-message">{{ 'acceptPrivacyPolicy' | translate }}</small>
+                        </div>
+                      }
+
+                    </div>
+                  
+                    <!-- Senden-Button -->
+                    <input class="submit-button" type="submit" value="{{ 'sendMessage' | translate }}">
+                  </form>
+                  
+                  <a class="scroll-to-top" (click)="scrollToSection('top')"><img src="./assets/img/arrow_to_up.svg" alt=""></a>
+                  
             </div>
         </div>
     </div>
-</section> 
+</section>

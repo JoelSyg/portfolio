@@ -1,13 +1,21 @@
 @import '../../../styles/variables';
 
+
 section {
     scroll-margin-top: -52px;
+    margin: auto;
+    max-width: 2600px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 
 .say-hi-wrap {
-
     width: 100%;
     background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .say-hi-top {
@@ -15,10 +23,26 @@ section {
     width: 100%;
     background-color: $primary-color;
     position: relative;
+
 }
 
 .say-hi-bottom {
     margin: 56px 100px 0px 100px;
+    max-width: 1600px;
+    width: calc(100% - 200px);
+
+    @media (max-width: 1380px) {
+        width: calc(100% - 120px);
+        margin: 56px 60px 0px 60px;
+    }
+
+    @media (max-width: 420px) {
+        margin: 56px 40px 0px 40px;
+        width: calc(100% - 80px);
+    }
+
+
+
     h2 {
         font-family: 'Syne';
         font-size: 78px;
@@ -27,6 +51,40 @@ section {
         font-weight: 800;
         color: $primary-color;
         transition: color 125ms ease-in-out;
+        padding-top: 30px;
+
+        @media (max-width: 1100px) {
+            font-size: 72px;
+            line-height: 72px;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 56px;
+            line-height: 56px;
+            padding-top: 0px;
+            margin-top: 0;
+        }
+
+        @media (max-width: 510px) {
+            font-size: 52px;
+            line-height: 52px;
+        }
+
+        @media (max-width: 510px) {
+            font-size: 52px;
+            line-height: 52px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 46px;
+            line-height: 46px;
+        }
+
+        @media (max-width: 320px) {
+            font-size: 42px;
+            line-height: 42px;
+        }
         
         &:hover {
             color: $accent-color;
@@ -38,78 +96,232 @@ section {
         flex-direction: column;
         align-items: center;
         font-family: 'Overpass';
+        position: relative;
 
         .question {
             color: $accent-color;
             font-size: 32px;
             line-height: 38px;
             font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 28px;
         }
 
         span {
             color: $primary-color;
             font-size: 23px;
             line-height: 27px;
-
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
-            width: 618px;
+            gap: 36px;
+            width: 100%;
+            max-width: 568px;
+            margin-top: 24px;
+            margin-bottom: 42px;
 
+            .input-wrapper {
+                width: calc(100% + 48px);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+            }
+
+            .checkbox-wrapper {
+                width: calc(100% + 48px);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+            }
+
+            label {
+                color: $primary-color;
+                font-size: 18px;
+                margin-left: 16px;
+                padding-left: 1px;
+                padding-right: 2px;
+                position: absolute;
+                top: -11px;
+                background-color: black;
+            }
+                
             #name {
                 height: 50px;
-                width: 100%;
+                width: calc(100% - 48px);
                 background-color: transparent;
                 color: $primary-color;
-                border-bottom: 2px solid $primary-color;
-                border-left: none;
-                border-right: none;
-                border-top: none;
-                
+                border: 2px solid $primary-color;
+                border-left-color: transparent;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                padding-left: 24px;
+                padding-right: 24px;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "Overpass";
+            
                 &::placeholder {
                     color: $primary-color;
-                    padding-left: 16px;
+                }
+            
+                &:hover {
+                    outline: 3px solid $primary-color;
+                    border-color: transparent;
+                }
+            
+                &.filled,
+                &:focus {
+                    border: 2px solid $primary-color;
+                    outline: none;
+
+                    &:not(.filled):hover  {
+                        outline: 3px solid $primary-color;
+                        border-color: transparent;
+                    }
                 }
             }
-            
 
             #email {
                 height: 50px;
-                width: 100%;
+                width: calc(100% - 48px);
                 background-color: transparent;
                 color: $primary-color;
-                border-bottom: 2px solid $primary-color;
-                border-left: none;
-                border-right: none;
-                border-top: none;
-
+                border: 2px solid $primary-color;
+                border-left-color: transparent;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                padding-left: 24px;
+                padding-right: 24px;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "Overpass";
+            
                 &::placeholder {
                     color: $primary-color;
-                    padding-left: 16px;
+                }
+            
+                &:hover {
+                    outline: 3px solid $primary-color;
+                    border-color: transparent;
+                }
+            
+                &.filled,
+                &:focus {
+                    border: 2px solid $primary-color;
+                    outline: none;
+
+                    &:not(.filled):hover  {
+                        outline: 3px solid $primary-color;
+                        border-color: transparent;
+                    }
                 }
             }
 
             textarea {
-                height: 200px;
-                width: 100%;
+                height: 180px;
+                width: calc(100% - 48px);
                 background-color: transparent;
                 color: $primary-color;
-                border-bottom: 2px solid $primary-color;
-                border-left: none;
-                border-right: none;
-                border-top: none;
+                border: 2px solid $primary-color;
+                border-left-color: transparent;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 16px;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "Overpass";
 
                 &::placeholder {
                     color: $primary-color;
-                    padding-left: 16px;
+                }
+            
+                &:hover {
+                    outline: 3px solid $primary-color;
+                    border-color: transparent;
+                }
+            
+                &.filled,
+                &:focus {
+                    border: 2px solid $primary-color;
+                    outline: none;
+
+                    &:not(.filled):hover  {
+                        outline: 3px solid $primary-color;
+                        border-color: transparent;
+                    }
                 }
             }
 
+            .privacy-policy {
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                margin-bottom: -4px;
+                padding-left: 4px;
+                align-items: center; /* Zentriert das Bild vertikal mit dem Text */
+                flex-wrap: wrap; /* Ermöglicht das Umbrechen des Texts, wenn der Platz knapp wird */
+                
+                img {
+                    cursor: pointer;
+                    flex-shrink: 0; /* Verhindert, dass das Bild skaliert, wenn der Platz kleiner wird */
+                }
+            
+                span {
+                    font-size: 14px;
+                    display: inline; /* Ermöglicht besseren Textumbruch */
+                    word-break: break-word; /* Erlaubt Wortumbruch, falls der Text zu lang wird */
+                    line-height: 1.5; /* Bessere Lesbarkeit durch höheren Zeilenabstand */
+                    flex: 1; /* Nutze den restlichen verfügbaren Platz */
+                }
+            
+                a {
+                    text-decoration: none;
+                    color: $accent-color;
+                    transition: color 0.05s ease;
+                }
+            
+                &:hover {
+                    .privacy-policy-link {
+                        color: lighten($accent-color, 5%);
+                        text-shadow: 0.25px 0.25px 0 $accent-color, -0.25px -0.25px 0 $accent-color;
+                        transition: color 0.05s ease, text-shadow 0.05s ease;
+                    }
+            
+                    img {
+                        background-color: $accent-color;
+                    }
+                }
+            }
+            
+            @media (max-width: 700px) {
+                .privacy-policy {
+                    flex-wrap: wrap; /* Text umbricht neben der Checkbox */
+                     
+                    img {
+                        margin-bottom: 5px; /* Abstand zwischen Checkbox und Text bei kleinem Bildschirm */
+                    }
+            
+                    span {
+                        text-align: left;
+                        width: auto; /* Umbricht nach Bedarf */
+                    }
+            
+                    a {
+                        width: auto; /* Link flexibel halten */
+                    }
+                }
+            }
+            
+
             .submit-button {
+                z-index: 1;
                 border: 4px solid $primary-color;
                 height: 68px;
                 width: 213px;
@@ -118,6 +330,7 @@ section {
                 transition: width 0.1s, font-weight 0.1s;
                 cursor: pointer;
                 color: $primary-color;
+                margin-top: 12px;
             
                 &:hover {
                   width: 240px;
@@ -128,10 +341,16 @@ section {
                   color: black;
                   background-color: $primary-color;
                 }
+
+                &:disabled {
+                  color: #bbbbbb60;
+                  border: 4px solid #bbbbbb60;
+                }
               }
+            
+            }
         }
     }
-}
 
 .say-hi-top::before {
     content: "";
@@ -142,6 +361,116 @@ section {
     height: 160px;
     background-color: rgb(0, 0, 0);
     transform: skewY(5deg);
+
+    @media (max-width: 1100px) {
+        height: 120px;
+        bottom: -70px;
+    }
+
+    @media (max-width: 900px) {
+        height: 110px;
+        bottom: -65px;
+    }
+
+    @media (max-width: 800px) {
+        height: 100px;
+        bottom: -50px;
+    }
+
+    @media (max-width: 700px) {
+        height: 70px;
+        bottom: -32px;
+    }
+
+    @media (max-width: 600px) {
+        height: 62px;
+        bottom: -26px;
+    }
+
+    @media (max-width: 470px) {
+        height: 48px;
+        bottom: -22px;
+    }
+
+    @media (max-width: 400px) {
+        height: 40px;
+        bottom: -20px;
+    }
+
+    @media (max-width: 400px) {
+        height: 40px;
+        bottom: -20px;
+    }
+
+    @media (max-width: 350px) {
+        height: 38px;
+        bottom: -17px;
+    }
+
+    @media (min-width: 1610px) {
+        height: 160px;
+        bottom: -80px;
+    }
+
+    @media (min-width: 1750px) {
+        height: 220px;
+        bottom: -100px;
+    }
+
+    @media (min-width: 2250px) {
+        height: 240px;
+        bottom: -115px;
+    }
+
+
 }
 
+
+.error-message {
+    color:#E61C40;
+    font-size: 12px;
+  }
+  
+  .required-message {
+    display: flex;
+    width: calc(100% + 60px);
+    justify-content: left;
+    position: absolute; /* Relativ zum Elternelement */
+    bottom: -26px; /* 20px unterhalb des Elternelements */
+}
+
+input:-webkit-autofill {
+    background-color: black !important;
+    -webkit-box-shadow: 0 0 0px 1000px black inset !important; /* Schwarzer Hintergrund */
+    color: white !important; /* Textfarbe festlegen */
+    transition: background-color 5000s ease-in-out 0s; /* Verhindert das Zurücksetzen der Farbe */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    color: white !important; /* Textfarbe für alle Autofill-Zustände */
+    -webkit-text-fill-color: white !important; /* Füllt den Text weiß */
+}
+
+.scroll-to-top {
+    position: absolute;
+    bottom: 52px;
+    height: 60px;
+    right: -10px;
+    z-index: 100; // Ensures it's on top of other elements within the container
+    overflow: hidden;
+    transition: height 0.2s ease; // Smooth transition for height
+    cursor: pointer;
+
+    &:hover {
+        height: 78px;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+}
 

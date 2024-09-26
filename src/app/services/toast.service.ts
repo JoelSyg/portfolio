@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ToastService {
   private toastElement: HTMLElement | null = null;
 
-  show(message: string, duration: number = 3000) {
+  show(message: string, duration: number = 4000) {
     if (!this.toastElement) {
       this.toastElement = document.createElement('div');
       this.toastElement.className = 'toast-message';
