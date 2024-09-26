@@ -1,57 +1,81 @@
 <header>
-    <a (click)="scrollToSection('top')"><img class="logo-img" src="./assets/img/js_logo.svg" alt="Logo"></a>
-    <div class="wrapper-right">
-      <div>
-        <span 
-          (click)="toggleMarkedLanguage('de')" 
-          class="{{ language === 'de' ? 'selected' : '' }}" class="language"
-        >DE</span>
-        <span>|</span>
-        <span 
-          (click)="toggleMarkedLanguage('en')" 
-          class="{{ language === 'en' ? 'selected' : '' }}" class="language"
-        >EN</span>
-      </div>
-      <img class="menu-img" (click)="toggleMenu()" src="{{imgSource}}" alt="Menu">
+  <a (click)="scrollToSection('top')"
+    ><img class="logo-img" src="./assets/img/js_logo.svg" alt="Logo"
+  /></a>
+  <div class="wrapper-right">
+    <div>
+      <span
+        (click)="toggleMarkedLanguage('de')"
+        class="{{ language === 'de' ? 'selected' : '' }}"
+        class="language"
+        >DE</span
+      >
+      <span>|</span>
+      <span
+        (click)="toggleMarkedLanguage('en')"
+        class="{{ language === 'en' ? 'selected' : '' }}"
+        class="language"
+        >EN</span
+      >
     </div>
-  </header>
-  
-  
+    <img
+      class="menu-img"
+      (click)="toggleMenu()"
+      src="{{ imgSource }}"
+      alt="Menu"
+    />
+  </div>
+</header>
 
 <div class="menu" [class.open]="menuOpen">
-    <nav>
-        <a (click)="scrollToSection('aboutMe'); toggleMenu()">{{'aboutMe' | translate}}</a>
-        <a (click)="scrollToSection('mySkills'); toggleMenu()">{{'mySkills' | translate}}</a>
-        <a (click)="scrollToSection('portfolio'); toggleMenu()">Portfolio</a>
-    </nav>
+  <nav>
+    <a (click)="scrollToSection('aboutMe'); toggleMenu()">{{
+      "aboutMe" | translate
+    }}</a>
+    <a (click)="scrollToSection('mySkills'); toggleMenu()">{{
+      "mySkills" | translate
+    }}</a>
+    <a (click)="scrollToSection('portfolio'); toggleMenu()">Portfolio</a>
+  </nav>
 
-    <div class="say-hi-wrap">
-        <div class="say-hi-top"></div>
-        <div class="say-hi-bottom">
-            <div class="say-hi-text">
-                <a (click)="scrollToSection('sayHi'); toggleMenu()">{{ 'sayHi' | translate }}</a>
-                <span class="mail-adress">sygullajoel&#64;gmail.com</span>
-            </div>
-            <div class="icons">
-                <div>
-                    <a href="https://github.com/JoelSyg" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/img/github_icon_white.svg" alt="GitHub">
-                    </a>
-                </div>
-                <div>
-                    <a href="mailto:sygullajoel@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/img/mail_icon_white.svg" alt="E-Mail">
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/joel-sygulla-429aa831a" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/img/linkedin_icon_white.svg" alt="LinkedIn">
-                    </a>
-                </div>
-            </div>
+  <div class="say-hi-wrap">
+    <div class="say-hi-top"></div>
+    <div class="say-hi-bottom">
+      <div class="say-hi-text">
+        <a (click)="scrollToSection('sayHi'); toggleMenu()">{{
+          "sayHi" | translate
+        }}</a>
+        <span class="mail-adress">sygullajoel&#64;gmail.com</span>
+      </div>
+      <div class="icons">
+        <div>
+          <a
+            href="https://github.com/JoelSyg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/img/github_icon_white.svg" alt="GitHub" />
+          </a>
         </div>
+        <div>
+          <a
+            href="mailto:sygullajoel@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/img/mail_icon_white.svg" alt="E-Mail" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/joel-sygulla-429aa831a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/img/linkedin_icon_white.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
-
-

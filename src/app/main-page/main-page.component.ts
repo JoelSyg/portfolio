@@ -11,10 +11,17 @@ import { FooterComponent } from '../shared/footer/footer.component';
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [HeaderComponent, HeroSectionComponent, MySkillsComponent, AboutMeComponent, PortfolioComponent, ReferencesComponent, SayHiComponent, FooterComponent],
+  imports: [
+    HeaderComponent,
+    HeroSectionComponent,
+    MySkillsComponent,
+    AboutMeComponent,
+    PortfolioComponent,
+    ReferencesComponent,
+    SayHiComponent,
+    FooterComponent,
+  ],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
+  styleUrl: './main-page.component.scss',
 })
-export class MainPageComponent {
-
-}
+export class MainPageComponent {}

@@ -1,23 +1,21 @@
 <div class="portfolio-wrapper">
-<section id="portfolio">
-  <h2>Portfolio</h2>
-  <!-- <span>Explore a selection of my work here - Interact with<br>projects to see my skills in action.</span> -->
-  <span>{{ 'portfolio_part1' | translate }}<br>{{ 'portfolio_part2' | translate }}</span>
-  <div class="projects">
-    @for (project of projects; let i = $index; track i;) {
-      <app-project 
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <span
+      >{{ "portfolio_part1" | translate }}<br />{{
+        "portfolio_part2" | translate
+      }}</span
+    >
+    <div class="projects">
+      @for (project of projects; let i = $index; track i;) {
+      <app-project
         [project]="project"
-        [additionalClass]="(i % 2) === 1 ? 'even-project' : ''"
+        [additionalClass]="i % 2 === 1 ? 'even-project' : ''"
         [projectNumber]="i + 1"
-        [totalProjects]="projects.length">
+        [totalProjects]="projects.length"
+      >
       </app-project>
-    }
-  </div>
-</section>
+      }
+    </div>
+  </section>
 </div>
-
-
-
-  
-  
-  

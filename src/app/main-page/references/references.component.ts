@@ -13,7 +13,7 @@ export class ReferencesComponent implements OnInit {
   references = [
     {
       name: 'Alexander Hähnlein',
-      text: 'reference_alexander', 
+      text: 'reference_alexander',
     },
     {
       name: 'Jonas Mahlburg',
@@ -56,5 +56,4 @@ export class ReferencesComponent implements OnInit {
   renderReference() {
     this.reference = this.references[this.currentReference];
   }
-
 }

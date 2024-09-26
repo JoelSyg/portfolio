@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   position: relative;
- 
+
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
@@ -22,7 +22,7 @@
 }
 
 .arrow-wrap.left.visible img {
-  transform: translate(-60px, 60px); /* Bewegt das Bild innerhalb des Containers */
+  transform: translate(-60px, 60px);
 }
 
 .arrow-wrap.right.visible {
@@ -30,7 +30,5 @@
 }
 
 .arrow-wrap.right.visible img {
-  transform: translate(60px, 60px); /* Bewegt das Bild innerhalb des Containers */
+  transform: translate(60px, 60px);
 }
-
-

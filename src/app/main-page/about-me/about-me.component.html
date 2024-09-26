@@ -1,14 +1,14 @@
 <section id="aboutMe">
   <div class="wrapper">
     <div class="info-div">
-      <h2>{{'aboutMe' | translate}}</h2>
+      <h2>{{ "aboutMe" | translate }}</h2>
       <p>
-        {{ 'aboutMe_part1' | translate }}
-        <br>
-        <br>
-        {{ 'aboutMe_part2' | translate }}
+        {{ "aboutMe_part1" | translate }}
+        <br />
+        <br />
+        {{ "aboutMe_part2" | translate }}
       </p>
-      <button (click)="onButtonClick()">{{ 'letsTalk' | translate }}</button> 
+      <button (click)="onButtonClick()">{{ "letsTalk" | translate }}</button>
     </div>
 
     <div>
@@ -22,15 +22,11 @@
     </div>
   </div>
 
-<app-arrow 
-  direction="left" 
-  imgSrc="./assets/img/arrow_left.svg" 
-  marginRight="0"
-  marginLeft="70%">
-</app-arrow>
-
-
+  <app-arrow
+    direction="left"
+    imgSrc="./assets/img/arrow_left.svg"
+    marginRight="0"
+    marginLeft="70%"
+  >
+  </app-arrow>
 </section>
-
-
-

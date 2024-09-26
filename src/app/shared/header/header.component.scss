@@ -1,333 +1,327 @@
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 header {
-    height: 93px; // sieht besser aus, beim scrollen wenn header offen ist
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 21;
+  background-color: $primary-color;
+  padding: 0px 100px 0px 100px;
+  max-width: 1600px;
+  margin: auto;
+  overflow-x: hidden;
+
+  @media (max-width: 1380px) {
+    padding: 0px 60px 0px 60px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 0px 25px 0px 25px;
+  }
+
+  @media (max-width: 380px) {
+    padding: 0px 18px 0px 18px;
+  }
+
+  .wrapper-right {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 21;
-    background-color: $primary-color;
-    padding: 0px 100px 0px 100px;
-    max-width: 1600px;
-    margin: auto;
-    overflow-x: hidden;
+    gap: 42px;
+    align-items: start;
 
-    @media (max-width: 1380px) {
-        padding: 0px 60px 0px 60px;
-    }
+    div {
+      display: flex;
+      gap: 4px;
+      font-size: 22px;
+      font-family: "Overpass";
+      align-items: center;
+      font-weight: 600;
 
-    @media (max-width: 720px) {
-        padding: 0px 25px 0px 25px;
-    }
-
-    @media (max-width: 380px) {
-        padding: 0px 18px 0px 18px;
+      .language {
+        cursor: pointer;
       }
-
-    .wrapper-right{
-        display: flex;
-        gap: 42px;
-        align-items: start;
-
-        div {
-            display: flex;
-            gap: 4px;
-            font-size: 22px;
-            font-family: 'Overpass';
-            align-items: center;
-            font-weight: 600;
-
-            .language {
-                cursor: pointer;
-            }
-        }
     }
+  }
 }
 
 .selected {
-    color: $accent-color;
-  }
+  color: $accent-color;
+}
 
 .logo-img {
-    height: 30px;
-    cursor: pointer;
+  height: 30px;
+  cursor: pointer;
 }
 
 .menu-img {
-    height: 32px;
-    cursor: pointer;
-    width: 37px;
+  height: 32px;
+  cursor: pointer;
+  width: 37px;
 }
-
 
 .menu {
-    position: fixed;
-    top: 92px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $primary-color; 
-    z-index: 9;
-    transform: translateY(-120%);
-    transition: transform 0.25s ease-in-out;
-    overflow-y: auto;
+  position: fixed;
+  top: 92px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $primary-color;
+  z-index: 9;
+  transform: translateY(-120%);
+  transition: transform 0.25s ease-in-out;
+  overflow-y: auto;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1600px;
+  margin: 0 auto;
+
+  nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
-    max-width: 1600px;
-    margin: 0 auto;
+    a {
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+      font-size: 80px;
+      color: black;
+      font-family: "Syne";
+      letter-spacing: 2.5%;
+      line-height: 80px;
+      font-weight: 700;
+      text-align: center;
+      padding: 36px;
 
-    nav {
-        display: flex;
-        flex-direction: column;
-
-        a {
-            cursor: pointer;
-            position: relative;
-            text-decoration: none;
-            font-size: 80px;
-            color: black;
-            font-family: 'Syne';
-            letter-spacing: 2.5%;
-            line-height: 80px;
-            font-weight: 700;
-            text-align: center;
-            padding: 36px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 39px;
-                height: 52px;
-                border-left: 4px solid black;
-                border-bottom: 4px solid black;
-
-                @media (max-height: 600px) {
-                    height: 40px;
-                    width: 30px;
-                }
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                height: 4px;
-                background-color: black;
-                width: 0%;
-            }
-
-            &:hover::before {
-                border: none;
-            }
-
-            &:hover::after {
-                animation: expandShrink 0.25s forwards;
-            }
-        }
-
-        a:first-of-type {
-            padding-top: 12px;
-        }
-
-        @media (max-width: 800px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: calc(100vh - 300px); // 300px für den Header und Say Hi Bereich
-            // margin-top: 92px;
-
-            a {
-                font-size: 62px;
-                line-height: 62px;
-                padding: 24px;
-
-                @media (max-width: 500px) {
-                    font-size: 48px;
-                    line-height: 48px;
-                }
-
-                @media (max-height: 600px) {
-                    padding: 18px;
-                    font-size: 44px;
-                    line-height: 44px;
-                }
-                
-            }
-        }
-    }
-}
-
-.menu.open {
-    transform: translateY(0);
-    z-index: 20;
-    margin: 0 auto;
-
-    @media (max-height: 500px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.say-hi-wrap {
-    height: 200px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-
-    @media (max-height: 500px) {
-        display: none;
-    }
-
-    .say-hi-top {
-        height: 40px;
-        width: 100%;
-        background-color: $primary-color;
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -80px;
-            height: 150px;
-            background-color: rgb(0, 0, 0);
-            transform: skewY(5deg);
-
-            @media (max-width: 800px) {
-                bottom: -60px;
-                height: 120px;
-            }
-        }
-    }
-
-    .say-hi-bottom {
-        color: $primary-color;
-        padding: 0px 100px 56px 100px;
+      &::before {
+        content: "";
         position: absolute;
         bottom: 0;
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        height: 160px;
-        width: 100%;
-        box-sizing: border-box;
+        left: 0;
+        width: 39px;
+        height: 52px;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
 
-        @media (max-width: 1380px) {
-            padding: 0px 60px 56px 60px;
+        @media (max-height: 600px) {
+          height: 40px;
+          width: 30px;
         }
+      }
 
-        @media (max-width: 720px) {
-            padding: 0px 25px 25px 25px;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 4px;
+        background-color: black;
+        width: 0%;
+      }
 
-        @media (max-width: 380px) {
-            padding: 0px 18px 25px 18px;
-          }
+      &:hover::before {
+        border: none;
+      }
 
+      &:hover::after {
+        animation: expandShrink 0.25s forwards;
+      }
+    }
 
-        .say-hi-text {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-
-            a {
-                font-family: 'Syne';
-                font-size: 78px;
-                line-height: 78px;
-                letter-spacing: 1%;
-                font-weight: 800;
-                z-index: 10;
-                margin: 0;
-                text-decoration: none;
-                color: $primary-color;
-                transition: color 125ms ease-in-out;
-                cursor: pointer;
-
-                @media (max-width: 800px) {
-                    font-size: 52px;
-                }
-
-                &:hover {
-                    color: $accent-color;
-                }
-            }
-
-            span {
-                font-size: 23px;
-                font-family: 'Overpass';
-                font-weight: 300;
-                z-index: 10;
-            }
-        }
-
-        .icons {
-            display: flex;
-            width: 180px;
-            justify-content: space-between;
-
-            div {
-                img {
-                    transition: transform 125ms;
-                }
-
-                &:hover img {
-                    transform: translateY(-8px);
-                }
-            }
-        }
+    a:first-of-type {
+      padding-top: 12px;
     }
 
     @media (max-width: 800px) {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 150px;
-        background-color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100vh - 300px);
 
-        .say-hi-bottom {
-            padding: 0px 5px 25px 25px;
-            justify-content: start;
+      a {
+        font-size: 62px;
+        line-height: 62px;
+        padding: 24px;
 
-            .say-hi-text {
-                text-align: center;
-            }
-
-            .icons {
-                display: none;
-            }
-
-            .mail-adress {
-                display: none;
-            }
+        @media (max-width: 500px) {
+          font-size: 48px;
+          line-height: 48px;
         }
+
+        @media (max-height: 600px) {
+          padding: 18px;
+          font-size: 44px;
+          line-height: 44px;
+        }
+      }
     }
+  }
+}
+
+.menu.open {
+  transform: translateY(0);
+  z-index: 20;
+  margin: 0 auto;
+
+  @media (max-height: 500px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.say-hi-wrap {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+
+  @media (max-height: 500px) {
+    display: none;
+  }
+
+  .say-hi-top {
+    height: 40px;
+    width: 100%;
+    background-color: $primary-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -80px;
+      height: 150px;
+      background-color: rgb(0, 0, 0);
+      transform: skewY(5deg);
+
+      @media (max-width: 800px) {
+        bottom: -60px;
+        height: 120px;
+      }
+    }
+  }
+
+  .say-hi-bottom {
+    color: $primary-color;
+    padding: 0px 100px 56px 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 160px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 1380px) {
+      padding: 0px 60px 56px 60px;
+    }
+
+    @media (max-width: 720px) {
+      padding: 0px 25px 25px 25px;
+    }
+
+    @media (max-width: 380px) {
+      padding: 0px 18px 25px 18px;
+    }
+
+    .say-hi-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      a {
+        font-family: "Syne";
+        font-size: 78px;
+        line-height: 78px;
+        letter-spacing: 1%;
+        font-weight: 800;
+        z-index: 10;
+        margin: 0;
+        text-decoration: none;
+        color: $primary-color;
+        transition: color 125ms ease-in-out;
+        cursor: pointer;
+
+        @media (max-width: 800px) {
+          font-size: 52px;
+        }
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      span {
+        font-size: 23px;
+        font-family: "Overpass";
+        font-weight: 300;
+        z-index: 10;
+      }
+    }
+
+    .icons {
+      display: flex;
+      width: 180px;
+      justify-content: space-between;
+
+      div {
+        img {
+          transition: transform 125ms;
+        }
+
+        &:hover img {
+          transform: translateY(-8px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+
+    .say-hi-bottom {
+      padding: 0px 5px 25px 25px;
+      justify-content: start;
+
+      .say-hi-text {
+        text-align: center;
+      }
+
+      .icons {
+        display: none;
+      }
+
+      .mail-adress {
+        display: none;
+      }
+    }
+  }
 }
 
 @keyframes expandShrink {
-    0% {
-        width: 39px;
-        left: 0;
-    }
-    50% {
-        width: 100%;
-        left: 0;
-    }
-    100% {
-        width: 42%;
-        left: auto;
-        right: 0;
-    }
-
+  0% {
+    width: 39px;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 42%;
+    left: auto;
+    right: 0;
+  }
 }
-

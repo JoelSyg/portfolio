@@ -11,20 +11,19 @@ section {
 
   @media (max-width: 1380px) {
     padding: 120px 60px 0px 60px;
-}
+  }
 
-@media (max-width: 880px) {
-  padding: 32px 25px 0px 25px;
-}
+  @media (max-width: 880px) {
+    padding: 32px 25px 0px 25px;
+  }
 
-@media (max-width: 720px) {
-  padding: 120px 25px 0px 25px;
-}
+  @media (max-width: 720px) {
+    padding: 120px 25px 0px 25px;
+  }
 
-@media (max-width: 380px) {
-  padding: 120px 18px 0px 18px;
-}
-
+  @media (max-width: 380px) {
+    padding: 120px 18px 0px 18px;
+  }
 }
 
 .skills-container {
@@ -50,16 +49,12 @@ section {
   }
 
   @media (max-width: 500px) {
-    
-
   }
 
   @media (max-width: 430px) {
     padding-left: 30px;
     padding-right: 30px;
-
   }
-
 
   h2 {
     position: absolute;
@@ -140,11 +135,11 @@ section {
       line-height: 25px;
       top: -36px;
     }
-    
+
     transition: color 125ms ease-in-out;
-        
+
     &:hover {
-        color: $accent-color;
+      color: $accent-color;
     }
   }
 
@@ -165,31 +160,25 @@ section {
 
     @media (max-width: 545px) {
       margin: 30px 15px;
-      
     }
 
     @media (max-width: 505px) {
       margin: 26px 13px;
-      
     }
 
     @media (max-width: 470px) {
       margin: 20px 10px;
-      
     }
 
     @media (max-width: 430px) {
       margin: 14px 7px;
-      
     }
-
 
     &:hover {
       color: $accent-color;
 
       img {
         transform: translateY(-16px);
-
       }
     }
 
@@ -213,7 +202,6 @@ section {
       @media (max-width: 570px) {
         height: 60px;
       }
-
     }
   }
 }

@@ -1,12 +1,7 @@
 @import './variables';
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
-/* Standardmäßige Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; /* Dünne Scrollbar */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -14,18 +9,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4d4d4d; /* Standardmäßig helleres Grau */
-  transition: background-color 0.3s ease; /* Übergangseffekt für Hover und Drücken */
+  background-color: #4d4d4d;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover-Effekt */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #373737; /* Dunkleres Grau beim Hover */
+  background-color: #373737;
 }
 
-/* Aktiver Zustand (beim Drücken) */
 ::-webkit-scrollbar-thumb:active {
-  background-color: #0f0f0fe4; /* Komplett schwarz beim Drücken */
+  background-color: #0f0f0fe4;
 }
 
 
@@ -42,9 +35,7 @@ body {
   transform: translateX(-50%);
   visibility: hidden;
   min-width: 250px;
-  // background-color: #28a745;
   background-color: #FFFCF3;
-  // color: #FFFCF3;
   color: black;
   text-align: center;
   border-radius: 5px;

@@ -1,7 +1,7 @@
 <section>
-  <h2>{{ 'references' | translate }}</h2>
+  <h2>{{ "references" | translate }}</h2>
   <span>
-    {{ 'references_intro' | translate }}
+    {{ "references_intro" | translate }}
   </span>
   <div class="references-div">
     <div class="single-reference">
@@ -18,7 +18,8 @@
       (click)="lastReference()"
       alt=""
     />
-    @for (reference of references; track $index) { @if ($index == currentReference) {
+    @for (reference of references; track $index) { @if ($index ==
+    currentReference) {
     <img class="dot" src="./assets/img/dot_icon_blue.png" alt="" />
     } @else {
     <img class="dot" src="./assets/img/dot_icon_black.png" alt="" />
@@ -30,7 +31,8 @@
       alt=""
     />
   </div>
-  <app-arrow class="moving-arrow"
+  <app-arrow
+    class="moving-arrow"
     direction="left"
     imgSrc="./assets/img/arrow_left.svg"
     marginRight="0"

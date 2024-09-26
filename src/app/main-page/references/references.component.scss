@@ -9,15 +9,15 @@ section {
 
   @media (max-width: 1380px) {
     padding: 100px 60px 300px 60px;
-}
+  }
 
-@media (max-width: 720px) {
-  padding: 100px 25px 300px 25px;
-}
+  @media (max-width: 720px) {
+    padding: 100px 25px 300px 25px;
+  }
 
-@media (max-width: 380px) {
-  padding: 100px 18px 300px 18px;
-}
+  @media (max-width: 380px) {
+    padding: 100px 18px 300px 18px;
+  }
 }
 
 h2 {
@@ -28,61 +28,60 @@ h2 {
   font-weight: 800;
   margin-bottom: 32px;
   transition: color 125ms ease-in-out;
-        
+
   &:hover {
-      color: $accent-color;
+    color: $accent-color;
   }
 
   @media (max-width: 1300px) {
     font-size: 70px;
     line-height: 70px;
   }
-  
+
   @media (max-width: 1130px) {
     font-size: 62px;
     line-height: 62px;
   }
-  
+
   @media (max-width: 1070px) {
     font-size: 56px;
     line-height: 56px;
   }
-  
+
   @media (max-width: 940px) {
     font-size: 48px;
     line-height: 48px;
   }
-  
+
   @media (max-width: 800px) {
     font-size: 44px;
     line-height: 44px;
   }
-  
+
   @media (max-width: 500px) {
     font-size: 40px;
     line-height: 40px;
   }
-  
+
   @media (max-width: 460px) {
     font-size: 36px;
     line-height: 36px;
   }
-  
+
   @media (max-width: 420px) {
     font-size: 34px;
     line-height: 34px;
   }
-  
+
   @media (max-width: 380px) {
     font-size: 32px;
     line-height: 32px;
   }
-  
+
   @media (max-width: 330px) {
     font-size: 28px;
     line-height: 28px;
   }
-  
 }
 
 span {
@@ -118,9 +117,7 @@ span {
   }
 
   .wrapper {
-
     h3 {
-
       color: $accent-color;
       margin: 0;
     }
@@ -134,23 +131,19 @@ span {
   .arrow-icon {
     height: 42px;
     transition: transform 0.125s ease, color 0.125s ease, opacity 0.125s ease;
-    opacity: 0.9; /* Leicht transparent im Normalzustand */
+    opacity: 0.9;
     cursor: pointer;
   }
-  
+
   .arrow-icon:hover {
-    transform: scale(1.05); /* Vergrößerung des Icons */
-    opacity: 1; /* Volle Deckkraft beim Hover */
+    transform: scale(1.05);
+    opacity: 1;
   }
-  
-  
-  
 
   .dot {
     height: 16px;
   }
 }
-
 
 .moving-arrow {
   position: absolute;
@@ -165,6 +158,4 @@ span {
   @media (max-width: 500px) {
     right: 80px;
   }
-
 }
-

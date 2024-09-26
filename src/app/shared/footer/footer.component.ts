@@ -6,11 +6,10 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
   scrollToTop() {
     window.scrollTo(0, 0);
-  };
-
+  }
 }

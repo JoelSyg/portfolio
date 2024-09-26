@@ -11,27 +11,23 @@ import { ScrollService } from '../../services/scroll.service';
   standalone: true,
   imports: [FormsModule, RouterModule, TranslateModule],
   templateUrl: './say-hi.component.html',
-  styleUrl: './say-hi.component.scss'
+  styleUrl: './say-hi.component.scss',
 })
 export class SayHiComponent {
-
-  constructor (private scrollService: ScrollService) {
-
-  }
+  constructor(private scrollService: ScrollService) {}
 
   http = inject(HttpClient);
   toastService = inject(ToastService);
 
   contactData = {
-    name: "",
-    email: "",
-    message: ""
+    name: '',
+    email: '',
+    message: '',
   };
 
-
   isChecked: boolean = false;
-  checkboxBlankImg: string = "/assets/img/check_box_blank.svg";
-  checkboxFilledImg: string = "/assets/img/check_box.svg";
+  checkboxBlankImg: string = '/assets/img/check_box_blank.svg';
+  checkboxFilledImg: string = '/assets/img/check_box.svg';
 
   toggleCheckbox(): void {
     this.isChecked = !this.isChecked;
@@ -54,28 +50,29 @@ export class SayHiComponent {
 
   onSubmit(ngForm: NgForm) {
     if (!ngForm.valid || !this.isChecked) {
-      // Setzt alle Felder als berührt, um Fehlermeldungen anzuzeigen
-      ngForm.form.markAllAsTouched();  
+      ngForm.form.markAllAsTouched();
       return;
     }
-  
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
           this.toastService.show('Message sent successfully!', 3000);
           ngForm.resetForm();
         },
         error: (error) => {
-          this.toastService.show('Failed to send message. Please try again.', 3000);
+          this.toastService.show(
+            'Failed to send message. Please try again.',
+            3000
+          );
         },
       });
   }
 
   scrollToSection(section: string) {
-     {
+    {
       this.scrollService.scrollToSection(section);
-    };
+    }
   }
-  
-
 }

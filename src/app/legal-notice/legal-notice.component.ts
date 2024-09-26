@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { HeaderComponent } from "../shared/header/header.component";
-import { FooterComponent } from "../shared/footer/footer.component";
+import { HeaderComponent } from '../shared/header/header.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,10 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [RouterModule, HeaderComponent, FooterComponent, TranslateModule],
   templateUrl: './legal-notice.component.html',
-  styleUrls: ['./legal-notice.component.scss']
+  styleUrls: ['./legal-notice.component.scss'],
 })
 export class LegalNoticeComponent implements OnInit {
-
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -22,5 +21,4 @@ export class LegalNoticeComponent implements OnInit {
   navigateToMainPage() {
     this.router.navigate(['/main-page']);
   }
-
 }

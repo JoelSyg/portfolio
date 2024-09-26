@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [RouterModule, ProjectComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent {
   projects: {
@@ -22,10 +22,10 @@ export class PortfolioComponent {
     {
       title: 'Join',
       technologies: ['Javascript', 'HTML', 'CSS', 'Firebase'],
-      description: 'joinDescription', 
+      description: 'joinDescription',
       livetestLink: 'https://join-project.joel-sygulla.de/',
       githubLink: 'https://github.com/JoelSyg/Join',
-      imageUrl: './assets/img/join_img.png'
+      imageUrl: './assets/img/join_img.png',
     },
     {
       title: 'Pollo Loco',
@@ -33,7 +33,7 @@ export class PortfolioComponent {
       description: 'polloLocoDescription',
       livetestLink: '#',
       githubLink: 'https://github.com/JoelSyg/El-Pollo-Loco',
-      imageUrl: './assets/img/polloloco_img.png'
-    }
+      imageUrl: './assets/img/polloloco_img.png',
+    },
   ];
 }
