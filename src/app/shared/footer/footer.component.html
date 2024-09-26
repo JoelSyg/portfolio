@@ -1,4 +1,5 @@
-<footer>
+<footer class="footer-desktop">
+    <div class="footer-wrapper">
     <div class="footer-left">
         <img src="./assets/img/js_logo_white.svg" alt="Logo">
         <span>&#64; Joel Sygulla 2024</span>
@@ -24,5 +25,29 @@
         <div>
             <a class="ln-link" [routerLink]="['/legal-notice']">Legal notice</a>
         </div>
+    </div>
+</div>
+</footer>
+
+<footer class="footer-mobile">
+    <div class="mobile-links">
+        <a href="https://github.com/JoelSyg" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/img/github_icon_white.svg" alt="GitHub">
+        </a>
+        <a href="mailto:sygullajoel@gmail.com" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/img/mail_icon_white.svg" alt="E-Mail">
+        </a>
+        <a href="https://www.linkedin.com/in/joel-sygulla-429aa831a" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/img/linkedin_icon_white.svg" alt="LinkedIn">
+        </a>
+    </div>
+    <div class="mobile-logo">
+        <img src="./assets/img/js_logo_white.svg" alt="Logo">
+    </div>
+    <div class="mobile-copyright">
+        <span>&#64; Joel Sygulla 2024</span>
+    </div>
+    <div class="mobile-legal">
+        <a class="ln-link" [routerLink]="['/legal-notice']">Legal notice</a>
     </div>
 </footer>
