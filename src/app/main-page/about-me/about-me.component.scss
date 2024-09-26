@@ -3,13 +3,37 @@
 section {
   display: flex;
   flex-direction: column;
-  margin: $margin-left-right;
+  padding: 0px 100px 0px 100px;
+  margin: auto;
   scroll-margin-top: 92px;
+  max-width: 1600px;
+
+  @media (max-width: 1380px) {
+    padding: 0px 60px 0px 60px;
+}
+
+@media (max-width: 960px) {
+  padding: 0px 25px 0px 25px;
+}
+
+@media (max-width: 380px) {
+  padding: 0px 18px 0px 18px;
+}
+
+
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 880px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: -64px;
+  }
 
 .info-div {
   display: flex;
@@ -24,6 +48,55 @@ section {
     font-family: "Syne";
     font-weight: 800;
     margin: 0;
+
+    @media (max-width: 1300px) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+    
+    @media (max-width: 1130px) {
+      font-size: 62px;
+      line-height: 62px;
+    }
+    
+    @media (max-width: 1070px) {
+      font-size: 56px;
+      line-height: 56px;
+    }
+    
+    @media (max-width: 940px) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    
+    @media (max-width: 800px) {
+      font-size: 44px;
+      line-height: 44px;
+    }
+    
+    @media (max-width: 500px) {
+      font-size: 42px;
+      line-height: 42px;
+    }
+  
+    
+    @media (max-width: 420px) {
+      font-size: 38px;
+      line-height: 38px;
+    }
+    
+    @media (max-width: 380px) {
+      font-size: 36px;
+      line-height: 26px;
+    }
+    
+    @media (max-width: 330px) {
+      font-size: 34px;
+      line-height: 34px;
+    }
+    
+    
+    
 
     transition: color 125ms ease-in-out;
         
@@ -47,6 +120,10 @@ section {
     transition: width 0.1s, font-weight 0.1s;
     cursor: pointer;
 
+    @media (max-width: 880px) {
+      display: none;
+    }
+
     &:hover {
       width: 240px;
       font-weight: bold;
@@ -63,7 +140,26 @@ section {
   height: 533px;
   width: 533px;
   margin-top: 100px;
-  position: relative; // Wichtig für das Positionieren des Pseudo-Elements
+  position: relative;
+
+  @media (max-width: 1300px) {
+    height: 420px;
+    width: 420px;
+  }
+
+  @media (max-width: 1070px) {
+    height: 360px;
+    width: 360px;
+  }
+
+  @media (max-width: 880px) {
+    margin-top: 42px;
+  }
+
+  @media (max-width: 410px) {
+    height: 300px;
+    width: 300px;
+  }
 
   .portrait {
     height: 100%;

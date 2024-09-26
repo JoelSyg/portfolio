@@ -5,10 +5,10 @@
   <div class="project-info">
     <h3>{{ project.title }}</h3>
     <span>{{ project.technologies.join(' | ') }}</span>
-    <p>{{ project.description }}</p>
+    <p>{{ project.description | translate }}</p>
     <div class="buttons">
-      <button>Live test</button>
-      <button>Github</button>
+      <a [href]="project.livetestLink" target="_blank" class="btn">{{'liveTest' | translate }}</a>
+      <a [href]="project.githubLink" target="_blank" class="btn">Github</a>
     </div>
   </div>
   <span class="projectnumber">{{ formattedProjectNumber }}</span>

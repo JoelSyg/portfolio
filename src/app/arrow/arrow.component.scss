@@ -1,23 +1,36 @@
 .arrow-wrap {
-  width: 100%;
+  max-width: 80%;
   display: flex;
-  // justify-content: end;
+  justify-content: center;
+  position: relative;
+ 
   opacity: 0;
-  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
-  transform: translate(0, 0);
+  transition: opacity 0.25s ease-in-out;
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+.arrow-wrap img {
+  position: relative;
+  transition: transform 0.25s ease-in-out;
 
-  &.left.visible {
-    opacity: 1;
-    transform: translate(-60px, 60px);
-  }
-
-  &.right.visible {
-    opacity: 1;
-    transform: translate(60px, 60px);
+  @media (max-width: 400px) {
+    height: 200px;
   }
 }
+
+.arrow-wrap.left.visible {
+  opacity: 1;
+}
+
+.arrow-wrap.left.visible img {
+  transform: translate(-60px, 60px); /* Bewegt das Bild innerhalb des Containers */
+}
+
+.arrow-wrap.right.visible {
+  opacity: 1;
+}
+
+.arrow-wrap.right.visible img {
+  transform: translate(60px, 60px); /* Bewegt das Bild innerhalb des Containers */
+}
+
+

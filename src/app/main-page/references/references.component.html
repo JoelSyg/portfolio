@@ -1,12 +1,12 @@
 <section>
-  <h2>References</h2>
-  <span
-    >I excel not only when working independently but also as part<br>of a team. Here's what my colleagues have to say about collaborating with me.
+  <h2>{{ 'references' | translate }}</h2>
+  <span>
+    {{ 'references_intro' | translate }}
   </span>
   <div class="references-div">
     <div class="single-reference">
       <div class="wrapper">
-        <p class="reference-text">"{{ reference.text }}"</p>
+        <p class="reference-text">{{ reference.text | translate }}</p>
         <h3>- {{ reference.name }}</h3>
       </div>
     </div>
@@ -18,8 +18,7 @@
       (click)="lastReference()"
       alt=""
     />
-    @for (reference of references; track $index) { @if ($index ==
-    currentReference) {
+    @for (reference of references; track $index) { @if ($index == currentReference) {
     <img class="dot" src="./assets/img/dot_icon_blue.png" alt="" />
     } @else {
     <img class="dot" src="./assets/img/dot_icon_black.png" alt="" />
@@ -31,11 +30,11 @@
       alt=""
     />
   </div>
-  <app-arrow
+  <app-arrow class="moving-arrow"
     direction="left"
     imgSrc="./assets/img/arrow_left.svg"
     marginRight="0"
-    marginLeft="100%"
+    marginLeft="70%"
   >
   </app-arrow>
 </section>

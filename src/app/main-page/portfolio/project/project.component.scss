@@ -5,14 +5,53 @@
   justify-content: space-between;
   position: relative;
 
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
   .img-container {
     position: relative;
-    
+    max-width: fit-content;
+
+    @media (max-width: 1300px) {
+      max-height: 328px;
+      }
+
     img {
       filter: grayscale(1);
       transition: filter 0.3s;
       position: relative;
       z-index: 2;
+
+      @media (max-width: 1300px) {
+        height: 328px;
+      }
+
+      @media (max-width: 1200px) {
+        height: 328px;
+        filter: grayscale(0);
+      }
+
+      @media (max-width: 700px) {
+        height: 280px;
+      }
+
+      @media (max-width: 590px) {
+        height: 230px;
+      }
+
+      @media (max-width: 420px) {
+        height: 200px;
+      }
+
+      @media (max-width: 380px) {
+        height: 180px;
+      }
+
+      @media (max-width: 330px) {
+        height: 170px;
+      }
+      
     }
 
     &::before {
@@ -20,7 +59,7 @@
       position: absolute;
       top: 18px;
       left: 18px;
-      width: 100%; 
+      width: 100%;
       height: 100%;
       border: 4px solid black;
       box-sizing: border-box;
@@ -28,37 +67,196 @@
       opacity: 0;
       pointer-events: none;
       z-index: 3;
+
+      
+        @media (max-width: 1200px) {
+          opacity: 1;
+        }
+      
     }
   }
 
-  &:hover .img-container::before {
-    opacity: 1;
-  }
+  &:hover {
+    .img-container::before {
+      opacity: 1;
+    }
 
-  &:hover .img-container img {
-    filter: grayscale(0);
+    .img-container img {
+      filter: grayscale(0);
+    }
+
+    .project-info {
+      transform: translateX(0);
+      opacity: 1;
+      transition: transform 0.3s ease-in, opacity 0.3s ease-out;
+    }
   }
 
   .project-info {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     width: 600px;
     transition: transform 0.3s ease-in, opacity 0.01s ease-in 0.3s;
     transform: translateX(-117%);
     opacity: 0;
-}
 
-&:hover .project-info {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 0.3s ease-in, opacity 0.3s ease-out;
-}
+    @media (max-width: 1480px) {
+      width: 560px;
+    }
 
+    @media (max-width: 1440px) {
+      width: 500px;
+    }
+
+    @media (max-width: 1300px) {
+      position: relative;
+      top: -30px;
+    }
+
+    @media (max-width: 1200px) {
+      transform: translateX(0);
+      gap: 20px;
+      top: -54px;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      width: 400px;
+    }
+
+    @media (max-width: 420px) {
+      width: 300px;
+    }
+
+    @media (max-width: 360px) {
+      width: 280px;
+    }
+
+  }
+
+  h3 {
+    margin-top: 96px;
+    margin-bottom: 0;
+    font-size: 46px;
+    font-family: "Syne";
+    font-weight: 800;
+
+    @media (max-width: 1440px) {
+      font-size: 38px;
+    }
+  }
+
+  span {
+    font-size: 28px;
+    font-family: "Overpass";
+    color: $accent-color;
+
+    @media (max-width: 1440px) {
+      font-size: 24px;
+    }
+
+  }
+
+  p {
+    margin: 0;
+    font-size: 23px;
+    font-family: "Overpass";
+
+    @media (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+  }
+
+  .buttons {
+    display: flex;
+    gap: 32px;
+
+    @media (max-width: 700px) {
+      width: 360px;
+    }
+
+    @media (max-width: 400px) {
+      width: 300px;
+      height: 56px;
+    }
+
+    @media (max-width: 360px) {
+      width: 280px;
+      height: 50px;
+      gap: 16px;
+    }
+  
+    a {
+      display: block;
+      width: 213px;
+      height: 68px;
+      border: 4px solid black;
+      background-color: transparent;
+      font-size: 20px;
+      font-family: "Overpass";
+      text-align: center;
+      line-height: 68px; /* Vertikale Zentrierung des Textes */
+      color: black; /* Textfarbe */
+      text-decoration: none; /* Entfernt die Unterstreichung */
+      cursor: pointer;
+      transition: width 0.1s, font-weight 0.1s;
+  
+      &:hover {
+        width: 240px;
+        font-weight: bold;
+      }
+  
+      &:active {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+  
+
+  .projectnumber {
+    position: absolute;
+    top: -32px;
+    right: 0;
+    z-index: 4;
+    font-size: 42px;
+    font-family: 'Overpass';
+    font-weight: 700;
+    color: black;
+
+    @media (max-width: 1440px) {
+      font-size: 38px;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 34px;
+    }
+
+    @media (max-width: 1240px) {
+      font-size: 32px;
+      }
+    
+    @media (max-width: 1200px) {
+      top: -80px;
+    }
+
+    &.even-project-number {
+      right: auto;
+      left: 0;
+      top: -32px;
+    }
+  }
 
   /* Anpassungen für Projekte mit der Klasse even-project */
   &.even-project {
     flex-direction: row-reverse;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: end;
+    }
 
     .img-container::before {
       transform: translateX(-36px);
@@ -66,84 +264,54 @@
 
     .project-info {
       transform: translateX(118%);
+
+      @media (max-width: 1480px) {
+        width: 560px;
+      }
+  
+      @media (max-width: 1440px) {
+        width: 500px;
+      }
+  
+      @media (max-width: 1300px) {
+        position: relative;
+        top: -30px;
+      }
+  
+      @media (max-width: 1200px) {
+        transform: translateX(0);
+        opacity: 1;
+        text-align: right;
+        align-items: end;
+      }
+  
+      @media (max-width: 700px) {
+        width: 400px;
+      }
+  
+      @media (max-width: 420px) {
+        width: 300px;
+      }
+
+      @media (max-width: 360px) {
+        width: 280px;
+      }
+
+
     }
 
     &:hover .project-info {
       transform: translateX(0);
     }
 
-    /* Positionierung der Projektnummer für even-projects */
     .projectnumber {
       right: auto;
       left: 0;
-      top: -20px; /* Etwas höher positionieren */
-    }
-  }
+      top: -20px;
 
-  h3 {
-    margin-top: 96px;
-    font-size: 46px;
-    font-family: "Syne";
-    font-weight: 800;
-    margin-bottom: 0;
-  }
-
-  span {
-    font-size: 28px;
-    font-family: "Overpass";
-    color: $accent-color;
-  }
-
-  p {
-    font-size: 23px;
-    margin: 0;
-    font-family: "Overpass";
-  }
-
-  .buttons {
-    display: flex;
-    gap: 32px;
-
-    button {
-      border: 4px solid black;
-      height: 68px;
-      width: 213px;
-      background-color: transparent;
-      font-size: 20px;
-      transition: width 0.1s, font-weight 0.1s;
-      cursor: pointer;
-      display: block;
-      font-family: "Overpass";
-
-      &:hover {
-        width: 240px;
-        font-weight: bold;
+      @media (max-width: 1200px) {
+        top: -80px;
       }
-
-      &:active {
-        color: white;
-        background-color: black;
-      }
-    }
-  }
-
-  .projectnumber {
-    font-size: 42px;
-    font-family: 'Overpass';
-    font-weight: 700;
-    color: black;
-    position: absolute;
-    top: -32px; /* Etwas höher positionieren */
-    right: 0;
-    z-index: 4;
-
-    /* Anpassung für das even-project */
-    &.even-project-number {
-      right: auto;
-      left: 0;
-      top: -32px; /* Etwas höher positionieren */
     }
   }
 }
-
-

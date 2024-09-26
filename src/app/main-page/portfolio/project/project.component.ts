@@ -1,12 +1,17 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
+  imports: [TranslateModule],
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
+
+  language = 'de';
+
   @Input() project!: {
     title: string;
     technologies: string[];

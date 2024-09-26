@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProjectComponent } from './project/project.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [RouterModule, ProjectComponent],
+  imports: [RouterModule, ProjectComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
@@ -20,20 +21,19 @@ export class PortfolioComponent {
   }[] = [
     {
       title: 'Join',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
-      livetestLink: '#',
-      githubLink: '#',
+      technologies: ['Javascript', 'HTML', 'CSS', 'Firebase'],
+      description: 'joinDescription', 
+      livetestLink: 'https://join-project.joel-sygulla.de/',
+      githubLink: 'https://github.com/JoelSyg/Join',
       imageUrl: './assets/img/join_img.png'
     },
     {
       title: 'Pollo Loco',
       technologies: ['JavaScript', 'HTML', 'CSS'],
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: 'polloLocoDescription',
       livetestLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/JoelSyg/El-Pollo-Loco',
       imageUrl: './assets/img/polloloco_img.png'
     }
   ];
 }
-

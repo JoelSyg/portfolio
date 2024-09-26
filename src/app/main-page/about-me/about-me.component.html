@@ -1,15 +1,14 @@
 <section id="aboutMe">
   <div class="wrapper">
     <div class="info-div">
-      <h2>About me</h2>
+      <h2>{{'aboutMe' | translate}}</h2>
       <p>
-        Based in Berlin, I’m passionate about helping designers and companies bring their ideas to life through intuitive and engaging web applications.
-        I enjoy turning complex requirements into simple, effective solutions, drawing on both creativity and strong logical thinking. My curiosity drives me to keep exploring new technologies and improving my skills. 
+        {{ 'aboutMe_part1' | translate }}
         <br>
         <br>
-        If you think we’d work well together, contact me!
+        {{ 'aboutMe_part2' | translate }}
       </p>
-      <button (click)="onButtonClick()">Let's talk</button> 
+      <button (click)="onButtonClick()">{{ 'letsTalk' | translate }}</button> 
     </div>
 
     <div>

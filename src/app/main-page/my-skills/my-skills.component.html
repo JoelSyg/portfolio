@@ -1,6 +1,6 @@
 <section id="mySkills">
   <div class="skills-container">
-    <h2>My skills</h2>
+    <h2>{{ 'mySkills' | translate }}</h2>
     @for (skill of skills; track $index) {
     <div class="skill-div">
       <img src="{{ skill.image }}" alt="" />
@@ -11,8 +11,8 @@
   <app-arrow
     direction="right"
     imgSrc="./assets/img/arrow_right.svg"
-    marginRight="0"
-    marginLeft="6%"
+    marginRight="70%"
+    marginLeft="0%"
   >
   </app-arrow>
 </section>

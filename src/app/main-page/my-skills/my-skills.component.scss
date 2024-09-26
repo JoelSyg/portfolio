@@ -4,21 +4,62 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 120px 100px 0px 100px;
+  margin: auto;
+  padding: 120px 100px 0px 100px;
   scroll-margin-top: 164px;
+  max-width: 1600px;
+
+  @media (max-width: 1380px) {
+    padding: 120px 60px 0px 60px;
+}
+
+@media (max-width: 880px) {
+  padding: 32px 25px 0px 25px;
+}
+
+@media (max-width: 720px) {
+  padding: 120px 25px 0px 25px;
+}
+
+@media (max-width: 380px) {
+  padding: 120px 18px 0px 18px;
+}
+
 }
 
 .skills-container {
   position: relative;
   border: 4px solid #000;
-  padding-top: 20px;
-  height: 592px;
+  min-height: 592px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 12px;
+
+  @media (max-width: 1070px) {
+    height: 557px;
+  }
+
+  @media (max-width: 800px) {
+    padding-top: 72px;
+    padding-bottom: 60px;
+    height: 520px;
+  }
+
+  @media (max-width: 500px) {
+    
+
+  }
+
+  @media (max-width: 430px) {
+    padding-left: 30px;
+    padding-right: 30px;
+
+  }
+
 
   h2 {
     position: absolute;
@@ -31,7 +72,75 @@ section {
     padding: 0 10px;
     background: $primary-color;
     font-family: "Syne";
+    white-space: nowrap;
 
+    @media (max-width: 1300px) {
+      font-size: 70px;
+      line-height: 70px;
+      top: -104px;
+    }
+
+    @media (max-width: 1130px) {
+      font-size: 62px;
+      line-height: 62px;
+      top: -92px;
+    }
+
+    @media (max-width: 1070px) {
+      font-size: 56px;
+      line-height: 56px;
+      top: -84px;
+    }
+
+    @media (max-width: 940px) {
+      font-size: 48px;
+      line-height: 48px;
+      top: -72px;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 44px;
+      line-height: 44px;
+      top: -64px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 40px;
+      line-height: 40px;
+      top: -60px;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 36px;
+      line-height: 36px;
+      top: -54px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 32px;
+      line-height: 32px;
+      top: -48px;
+      letter-spacing: 0%;
+    }
+
+    @media (max-width: 380px) {
+      font-size: 29px;
+      line-height: 29px;
+      top: -43px;
+    }
+
+    @media (max-width: 340px) {
+      font-size: 27px;
+      line-height: 27px;
+      top: -40px;
+    }
+
+    @media (max-width: 324px) {
+      font-size: 25px;
+      line-height: 25px;
+      top: -36px;
+    }
+    
     transition: color 125ms ease-in-out;
         
     &:hover {
@@ -49,11 +158,38 @@ section {
     margin: 40px 20px;
     transition: color 0.125s ease-in-out;
 
+    @media (max-width: 800px) {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    @media (max-width: 545px) {
+      margin: 30px 15px;
+      
+    }
+
+    @media (max-width: 505px) {
+      margin: 26px 13px;
+      
+    }
+
+    @media (max-width: 470px) {
+      margin: 20px 10px;
+      
+    }
+
+    @media (max-width: 430px) {
+      margin: 14px 7px;
+      
+    }
+
+
     &:hover {
       color: $accent-color;
 
       img {
         transform: translateY(-16px);
+
       }
     }
 
@@ -62,11 +198,22 @@ section {
       line-height: 19px;
       font-family: "Overpass";
       font-weight: 700;
+      text-align: center;
+      height: 36px;
     }
 
     img {
-      height: 68px;
+      height: 75px;
       transition: transform 0.125s ease-in-out;
+
+      @media (max-width: 900px) {
+        height: 68px;
+      }
+
+      @media (max-width: 570px) {
+        height: 60px;
+      }
+
     }
   }
 }
