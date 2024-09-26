@@ -1,10 +1,23 @@
 @import "../../styles/variables";
 
 section {
-    margin: $margin-left-right;
-    padding-top: 24px;
+    margin: auto;
+    max-width: 1600px;
+    padding: 24px 100px 24px 100px;
     color: black;
     font-family: 'Overpass';
+
+    @media (max-width: 1380px) {
+        padding: 24px 60px 24px 60px;
+    }
+
+    @media (max-width: 720px) {
+        padding: 24px 25px 24px 25px;
+    }
+
+    @media (max-width: 380px) {
+        padding: 24px 18px 24px 18px;
+      }
 
     a {
         text-decoration: none;
@@ -18,7 +31,14 @@ section {
     .back-icon {
         height: 48px;
         cursor: pointer;
+        transition: transform 0.1s ease, color 0.1s ease, opacity 0.1s ease;
+        opacity: 0.9;
     }
+     
+      .back-icon:hover {
+        transform: scale(1.05);
+        opacity: 1;
+      }
 }
 
 

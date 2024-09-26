@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from "../shared/header/header.component";
 import { FooterComponent } from "../shared/footer/footer.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [RouterModule, HeaderComponent, FooterComponent],
+  imports: [RouterModule, HeaderComponent, FooterComponent, TranslateModule],
   templateUrl: './legal-notice.component.html',
-  styleUrls: ['./legal-notice.component.scss'] // Note: It should be 'styleUrls' instead of 'styleUrl'
+  styleUrls: ['./legal-notice.component.scss']
 })
 export class LegalNoticeComponent implements OnInit {
 
